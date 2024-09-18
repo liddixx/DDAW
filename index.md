@@ -66,7 +66,7 @@ SSH es ampliamente utilizado para administrar servidores y entornos remotos de f
    - Si aún no lo has hecho, descarga e instala [VirtualBox](https://www.virtualbox.org/) o [VMware](https://www.vmware.com/).
    
 2. **Descargar Ubuntu Server**:
-   - Dirígete al sitio oficial de Ubuntu y descarga la versión **Ubuntu Server** (preferiblemente la más reciente): [Ubuntu Server](https://ubuntu.com/download/server).
+   - Dirígete al sitio oficial de Ubuntu y descarga la versión **Ubuntu Server** (preferiblemente la más reciente): [Ubuntu Server](https://releases.ubuntu.com/jammy/).
    
 3. **Crear una nueva máquina virtual** en VirtualBox o VMware:
    - Abre VirtualBox/VMware.
