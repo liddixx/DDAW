@@ -1,4 +1,4 @@
-"""
+
 This class manages a list of students and their grades.
 It includes methods to:
 1. Add a new student with their grade.
@@ -6,7 +6,7 @@ It includes methods to:
 3. Update the grade of an existing student.
 4. Show the list of all students with their grades.
 5. Search for the grade of a specific student.
-"""
+
 
 ```python
 class StudentManager:
