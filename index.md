@@ -1,4 +1,4 @@
-# Introducción al Despliegue de Aplicaciones Web
+# Semana 1: Introducción al Despliegue de Aplicaciones Web
 
 ## Contenido
 
@@ -39,7 +39,25 @@ El ciclo de vida de desarrollo y despliegue de aplicaciones sigue una serie de e
 ## Práctica: Instalación y Configuración de una Máquina Virtual con Ubuntu Server
 
 ### Objetivo:
-El objetivo de esta práctica es que los estudiantes configuren una máquina virtual con **Ubuntu Server** y se conecten a ella utilizando **SSH** desde **WSL** en Windows o desde una terminal Linux, utilizando autenticación basada en **claves SSH**.
+El objetivo de esta práctica es configurar una máquina virtual con **Ubuntu Server** y conectarnos a ella utilizando **SSH** desde **WSL** en Windows o desde una terminal Linux, utilizando autenticación basada en **claves SSH**.
+
+### ¿Qué es SSH?
+
+**SSH** (Secure Shell) es un protocolo de red que permite a los usuarios conectarse de manera segura a un servidor remoto o a otra máquina en una red, utilizando una interfaz de línea de comandos. SSH cifra todo el tráfico entre el cliente y el servidor, garantizando que la comunicación esté protegida contra ataques, intercepciones y manipulaciones de datos.
+
+#### Características principales de SSH:
+- **Seguridad**: SSH utiliza técnicas de cifrado para garantizar que la información transmitida entre el cliente y el servidor esté protegida. Esto incluye la autenticación del usuario y la confidencialidad de los datos.
+- **Autenticación basada en claves**: Además de las contraseñas, SSH permite el uso de claves criptográficas para autenticar al usuario, lo que mejora la seguridad al evitar la necesidad de ingresar contraseñas en cada sesión.
+- **Interfaz de línea de comandos**: SSH proporciona acceso remoto a la línea de comandos del servidor, permitiendo ejecutar comandos, transferir archivos y gestionar el sistema desde cualquier lugar.
+
+#### Cómo funciona:
+1. **Cliente SSH**: Es la máquina o dispositivo desde el cual se inicia la conexión. El cliente SSH envía una solicitud de conexión al servidor.
+2. **Servidor SSH**: Es la máquina que recibe la solicitud y permite el acceso si las credenciales (contraseña o clave SSH) son válidas.
+3. **Autenticación**: El cliente puede autenticarse mediante una contraseña o un par de claves (pública y privada). En el caso de la autenticación basada en claves, la clave pública se almacena en el servidor, mientras que la clave privada permanece en el cliente. Si la clave privada coincide con la clave pública almacenada en el servidor, se permite el acceso.
+
+SSH es ampliamente utilizado para administrar servidores y entornos remotos de forma segura, y es esencial para los desarrolladores, administradores de sistemas y cualquier profesional que gestione servidores en entornos de red.
+
+---
 
 ### Pasos:
 
@@ -121,38 +139,20 @@ En lugar de utilizar una contraseña, generaremos un par de claves SSH (pública
      ```bash
      cat ~/.ssh/id_rsa.pub
      ```
-   - Copia el contenido y pégalo en el archivo `~/.ssh/authorized_keys` de tu servidor Ubuntu. Para ello, conéctate al servidor y ejecuta:
-     ```bash
-     mkdir -p ~/.ssh
-     echo "tu_clave_publica" >> ~/.ssh/authorized_keys
-     chmod 600 ~/.ssh/authorized_keys
-     ```
+   - Copia el contenido y pégalo en el archivo `~/.ssh/authorized_keys` en tu servidor Ubuntu.
 
-3. **Verificar la conexión con clave SSH**:
-   - Ahora puedes conectarte a tu servidor Ubuntu sin necesidad de usar una contraseña:
+### 4. Conectarse al Servidor Ubuntu mediante SSH
+
+1. **Conectarse desde WSL o Linux**:
+   - En la terminal, ejecuta el siguiente comando para conectarte al servidor Ubuntu:
      ```bash
      ssh usuario@<IP_de_tu_VM>
      ```
-   - Si todo está configurado correctamente, la conexión se realizará automáticamente usando la clave privada.
+   - Si la autenticación con clave es exitosa, deberías estar conectado al servidor Ubuntu sin necesidad de una contraseña.
 
-### 4. Conectarse por SSH desde Windows (usando WSL) o Linux
+---
 
-#### Desde **Windows (WSL)**:
-1. **Instalar WSL** (si no lo tienes instalado):
-   - Abre PowerShell como administrador y ejecuta el siguiente comando para habilitar WSL:
-     ```powershell
-     wsl --install
-     ```
+## Recursos
 
-2. **Conectarse por SSH**:
-   - Abre la terminal de WSL.
-   - Ejecuta el siguiente comando para conectarte a tu máquina virtual:
-     ```bash
-     ssh usuario@<IP_de_tu_VM>
-     ```
-
-#### Desde **Linux**:
-1. Abre la terminal.
-2. Ejecuta el comando SSH:
-   ```bash
-   ssh usuario@<IP_de_tu_VM>
+- **Documentación de Ubuntu Server**: [Ubuntu Server Guide](https://ubuntu.com/server/docs)
+- **Introducción a la arquitectura cliente-servidor**: [Cliente-Servidor en Wikipedia](https://es.wikipedia.org/wiki/Cliente-servidor)
