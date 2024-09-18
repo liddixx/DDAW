@@ -8,6 +8,7 @@ It includes methods to:
 5. Search for the grade of a specific student.
 """
 
+```python
 class StudentManager:
     def __init__(self):
         """Initializes the StudentManager with an empty list of students."""
