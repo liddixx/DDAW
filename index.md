@@ -1,4 +1,4 @@
-# Semana 1: Introducción al Despliegue de Aplicaciones Web
+# Introducción al Despliegue de Aplicaciones Web
 
 ## Contenido
 
@@ -7,6 +7,18 @@ El despliegue de aplicaciones es el proceso mediante el cual una aplicación des
 
 - **Despliegue manual**: Cuando el proceso de instalación, configuración y publicación se realiza de manera manual.
 - **Despliegue automatizado**: Cuando se utilizan herramientas o scripts que permiten automatizar el proceso de despliegue para reducir errores y aumentar la eficiencia.
+
+### Ejemplos de Herramientas para Despliegue Automatizado
+
+1. **Jenkins**:  
+   Jenkins es una herramienta de **Integración Continua (CI)** que permite automatizar las fases de construcción, prueba y despliegue del software. Se utiliza para ejecutar **pipelines de despliegue** que integran múltiples etapas automatizadas. Jenkins es muy flexible y se puede configurar para trabajar con una amplia variedad de tecnologías y entornos de servidor.  
+   - Sitio oficial: [https://www.jenkins.io](https://www.jenkins.io)
+
+2. **Ansible**:  
+   Ansible es una herramienta de **automatización de configuración** y **despliegue** que permite gestionar servidores y aplicaciones a través de archivos YAML. Con Ansible, es posible definir configuraciones y procedimientos de despliegue de manera declarativa, lo que hace que los despliegues sean repetibles y consistentes en cualquier entorno.  
+   - Sitio oficial: [https://www.ansible.com](https://www.ansible.com)
+
+---
 
 ### 2. Revisión del Ciclo de Vida de Desarrollo y Despliegue
 El ciclo de vida de desarrollo y despliegue de aplicaciones sigue una serie de etapas que garantizan que una aplicación pasa por diferentes pruebas y ajustes antes de ser accesible al público. Los pasos más comunes incluyen:
