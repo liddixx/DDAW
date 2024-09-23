@@ -7,7 +7,7 @@ It includes methods to:
 4. Show the list of all students with their grades.
 5. Search for the grade of a specific student.
 
-
+The data will be stored in a list of dictionaries where each dictionary represents a student.
 ```python
 class StudentManager:
     def __init__(self):
