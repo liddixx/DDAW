@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas y diccionarios en Python: desde principiantes hasta expertos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #333;
+        }
+        pre, code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listas y diccionarios en Python: desde principiantes hasta expertos</h1>
+
+    <p>En este documento, exploraremos las listas y diccionarios en Python, comenzando con conceptos básicos y avanzando hacia técnicas más avanzadas. Cubriremos tanto ejemplos prácticos como explicaciones detalladas para ayudarte a dominar estos fundamentales tipos de datos en Python.</p>
+
+    <h2>Listas en Python</h2>
+
+    <h3>Definición y creación de listas</h3>
+    <pre><code>mi_lista = [1, 2, 3, "hola", True]</code></pre>
+    <p>Puedes crear listas vacías o con elementos de diferentes tipos.</p>
+
+    <h3>Acceso a elementos</h3>
+    <pre><code>primero = mi_lista[0]
+segundo = mi_lista[1]</code></pre>
+    <p>Puedes acceder a elementos individuales por su índice. Los índices comienzan desde 0.</p>
+
+    <h3>Modificación de listas</h3>
+    <pre><code>mi_lista.append("nuevo elemento")
+mi_lista[1] = "cambiar valor"</code></pre>
+    <p>Las listas son mutables, lo que significa que puedes modificarlos después de su creación.</p>
+
+    <h3>Slicing</h3>
+    <pre><code>parte = mi_lista[1:3]</code></pre>
+    <p>El slicing te permite obtener subsecuencias de una lista. Este ejemplo obtiene los elementos desde el índice 1 hasta el 3 (excluido).</p>
+
+    <h3>Métodos de listas</h3>
+    <pre><code># Ordenar la lista
+mi_lista.sort()
+
+# Reversar la lista
+mi_lista.reverse()
+
+# Buscar un elemento
+si_existe = "hola" in mi_lista
+
+# Contar ocurrencias
+contar = mi_lista.count("hola")
+
+# Eliminar un elemento
+mi_lista.remove("hola")</code></pre>
+    <p>Python ofrece varios métodos útiles para trabajar con listas.</p>
+
+    <h2>Diccionarios en Python</h2>
+
+    <h3>Definición y creación de diccionarios</h3>
+    <pre><code>mi_diccionario = {"nombre": "Juan", "edad": 30, "ciudad": "Madrid"}</code></pre>
+    <p>Puedes crear diccionarios vacíos o con pares clave-valor de diferentes tipos.</p>
+
+    <h3>Acceso a valores</h3>
+    <pre><code>nombre = mi_diccionario["nombre"]</code></pre>
+    <p>Puedes acceder a los valores por su clave. Si la clave no existe, Python levantará una excepción. Para evitar esto, puedes usar el método `.get()`:</p>
+    <pre><code>nombre = mi_diccionario.get("nombre", "Desconocido")</code></pre>
+
+    <h3>Modificación de diccionarios</h3>
+    <pre><code>mi_diccionario["edad"] = 31
+mi_diccionario["ocupacion"] = "Desarrollador"
+
+# Agregar una nueva pareja clave-valor
+mi_diccionario["lenguaje_favorito"] = "Python"</code></pre>
+    <p>Los diccionarios también son mutables y puedes modificarlos.</p>
+
+    <h3>Iterar sobre diccionarios</h3>
+    <pre><code>for clave in mi_diccionario:
+        print(f"{clave}: {mi_diccionario[clave]}")
+
+for valor in mi_diccionario.values():
+    print(valor)
+
+for par in mi_diccionario.items():
+    print(par)</code></pre>
+    <p>Puedes iterar sobre las claves, valores o pares clave-valor de un diccionario.</p>
+
+    <h2>Avanzando con listas y diccionarios</h2>
+
+    <h3>Listas anidadas</h3>
+    <pre><code>lista_anidada = [[1, 2], [3, 4], [5, 6]]</code></pre>
+    <p>Puedes crear listas que contengan otras listas. Esta estructura es útil para representar matrices o tablas de datos.</p>
+
+    <h3>Diccionarios anidados</h3>
+    <pre><code>diccionario_anidado = {"personas": {"juan": 30, "maria": 25}}</code></pre>
+    <p>También puedes crear diccionarios que contengan otros diccionarios. Esto es útil para organizar datos jerárquicamente.</p>
+
+    <h3>Listas y diccionarios en funciones</h3>
+    <pre><code>def procesar_datos(datos):
+    for dato in datos:
+        print(dato)
+
+procesar_datos(mi_lista)
+
+def calcular_imponible(precio):
+    impuestos = {
+        "IVA": 0.21,
+        "IGIC": 0.0405
+    }
+    total = precio * (1 + impuestos["IVA"])
+    return total
+
+precio = 100
+total = calcular_imponible(precio)</code></pre>
+    <p>Puedes utilizar listas y diccionarios como argumentos de funciones.</p>
+
+    <h2>Mejores prácticas</h2>
+    <ol>
+        <li>Usa nombres descritivos para tus listas y diccionarios.</li>
+        <li>Mantén tus listas y diccionarios organizados y bien estructurados.</li>
+        <li>Utiliza constantes para valores que se repiten frecuentemente.</li>
+        <li>Considera usar tipos de datos más específicos cuando sea apropiado (por ejemplo, <code>tuple</code> para secuencias inmutables).</li>
+        <li>Documenta tu código explicando el propósito y el significado de tus estructuras de datos complejas.</li>
+    </ol>
+
+    <h2>Resumen</h2>
+    <p>En este documento, hemos cubierto los fundamentos de listas y diccionarios en Python, desde principiantes hasta técnicas avanzadas. Estas estructuras de datos son esenciales para cualquier programador Python y ofrecen gran flexibilidad y poder. Practica con estos conceptos y experimenta con diferentes escenarios para dominarlos completamente.</p>
+</body>
+</html>
