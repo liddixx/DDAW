@@ -10,7 +10,7 @@ This exercise focuses on managing a list of tasks, where each task has a title a
 4. Display the list of all tasks with their priorities.
 5. Search for the priority of a specific task.
 
-## Skeleton (in English):
+## Skeleton:
 ```python
 class TaskManager:
     def __init__(self):
@@ -47,3 +47,4 @@ if __name__ == "__main__":
     task_manager.search_priority("Do the shopping")
     task_manager.remove_task("Do the shopping")
     task_manager.show_tasks()
+```
