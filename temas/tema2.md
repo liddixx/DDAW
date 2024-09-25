@@ -93,6 +93,9 @@ Ya hemos comentado que el protocolo HTTP tiene un funcionamiento bastante sencil
 
 Gráficamente podemos resumir el proceso de comunicación HTTP como sigue:
 
+![Esquema peticion http](./Descargas/funcionamiento-http.png)
+
+
 Un usuario accede a una URL, seleccionando un enlace de un documento HTML o introduciéndola directamente en el campo correspondiente del cliente Web.
 
 El cliente Web descodifica la URL, separando sus diferentes partes: el protocolo de acceso, la dirección DNS o IP del servidor, el posible puerto opcional (el valor por defecto es 80) y el objeto requerido del servidor. http://direccion[:puerto][path]
@@ -176,6 +179,8 @@ Según el navegador el aspecto cambia un poco, pero todos muestran el proverbial
 
 Es decir, lo importante aquí es que hasta ahora los navegadores consideran HTTP como la norma, y HTTPS como la excepción, y por eso lo marcan de esta manera.
 Funcionamiento de HTTPS
+
+![Diagrama peticion https](./Descargas/https2.png)
 
 Servidores web: Apache vs Nginx
 
