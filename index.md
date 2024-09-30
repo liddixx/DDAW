@@ -6,4 +6,4 @@ Bienvenido a la página de recursos de despliegue de aplicaciones web. Aquí pue
 - [Tema 2: Introducción a la arquitectura web](temas/tema2.md)
 - [Ejercicios python Students](ejercicios_python/students.md)
 - [Ejercicios python Tasks](ejercicios_python/tasks.md)
-- [listas y diccionarios](ejercicios_python/listas_y_diccionarios/list_y_diccionarios.html)
+- [Ejercicios python pokemon](ejercicios_python/pokemon.md)
