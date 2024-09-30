@@ -12,6 +12,8 @@ Using the PokeAPI, your goal is to retrieve all Pokémon that are of the "Water"
 4. **Handle Errors**: Manage possible HTTP request errors or invalid responses from the API.
 5. **Display Results**: Print the names of the Water-type Pokémon in a clear and formatted manner (e.g., `The Water-type Pokémon are: "squirtle", "wartortle", "blastoise", ...`).
 
+type URL: 'https://pokeapi.co/api/v2/type/'
+
 ---
 
 ## Code Skeleton
